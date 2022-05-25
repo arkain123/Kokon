@@ -28,50 +28,40 @@ var answer = document.getElementById('answer').textContent;
 var CompleteGrade
 var err = 'Ошибка'
 var p = 0;
-
 if (YearGrade.value<0) { //проверка того, чтобы введенные значение были больше нуля
      p++
 }
 if (ExamGrade.value<0) {
      p++
 }
-
 if (ExamGrade.value < YearGrade.value,YearGrade.value - ExamGrade.value < 2) {
     CompleteGrade = YearGrade.value
 }
-
 if (ExamGrade.value<  YearGrade.value,YearGrade.value - ExamGrade.value >= 2) {
     CompleteGrade = ExamGrade.value
 }
-
 if (ExamGrade.value = YearGrade.value) {
     CompleteGrade.value = ExamGrade.value
     console.log ('Успешно, равны')
 }
-
 if (ExamGrade.value > YearGrade.value) {
     CompleteGrade = ExamGrade.value
 }
-
 if (CompleteGrade = 0) {
      p++
 }
-
 if (p>0) {
     //document.getElementById("answer").textContent = err;
 } else
 {
     //document.getElementById("answer").textContent = CompleteGrade;
 }
-
 function clickListener(){
    console.log(p);
    console.log(CompleteGrade);
    console.log(ExamGrade.value);
    console.log(YearGrade.value);
  }
-
-
 </script> -->
 </html>
 <script>
@@ -83,28 +73,28 @@ function clickListener(){
     var p = 0;
     
     function clickListener(){
-        if (YearGrade.value<0) { //проверка того, чтобы введенные значение были больше нуля
+        if (Number(YearGrade.value)<0) { //проверка того, чтобы введенные значение были больше нуля
          p++
     }
-    if (ExamGrade.value<0) {
+    if (Number(ExamGrade.value)<0) {
          p++
     }
     
-    if (ExamGrade.value < YearGrade.value,YearGrade.value - ExamGrade.value < 2) {
-        CompleteGrade = YearGrade.value
+    if ((Number(ExamGrade.value) < Number(YearGrade.value)) && (Number(YearGrade.value) - Number(ExamGrade.value) < 2)) {
+        CompleteGrade = Number(YearGrade.value)
     }
     
-    if (ExamGrade.value <  YearGrade.value,YearGrade.value - ExamGrade.value >= 2) {
-        CompleteGrade = ExamGrade.value
+    if ((Number(ExamGrade.value) <  Number(YearGrade.value)) && (Number(YearGrade.value) - Number(ExamGrade.value) >= 2)) {
+        CompleteGrade = Number(ExamGrade.value)
     }
     
-    if (ExamGrade.value == YearGrade.value) {
-        CompleteGrade.value = ExamGrade.value
+    if (Number(ExamGrade.value) == Number(YearGrade.value)) {
+        CompleteGrade.value = Number(ExamGrade.value)
         console.log ('Успешно, равны')
     }
     
-    if (ExamGrade.value > YearGrade.value) {
-        CompleteGrade = ExamGrade.value
+    if (Number(ExamGrade.value) > Number(YearGrade.value)) {
+        CompleteGrade = Number(ExamGrade.value)
     }
     
     if (CompleteGrade == 0) {
