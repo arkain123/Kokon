@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKZPROG</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm"><a >Годовая</a></span>
+        <input id='YG' type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm"><a>Экзаменационная</a></span>
+        <input id='EG' type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div id="btn">
+        <h1><a onclick = 'clickListener()'>Тык</a></h1><!--  onclick -возникает при щелчке левой кнопкой мыши на элементе change();-событие изменения формы return false;' 'это -->
+    </div>
+      <h1 id="answer">Итоговая - <div id="answer"></div> </h1>  
+</body>
+<!-- <script>
+var YearGrade = document.getElementById("YG");
+var ExamGrade = document.getElementById("EG");
+var answer = document.getElementById('answer').textContent;
+var CompleteGrade
+var err = 'Ошибка'
+var p = 0;
+
+if (YearGrade.value<0) { //проверка того, чтобы введенные значение были больше нуля
+     p++
+}
+if (ExamGrade.value<0) {
+     p++
+}
+
+if (ExamGrade.value < YearGrade.value,YearGrade.value - ExamGrade.value < 2) {
+    CompleteGrade = YearGrade.value
+}
+
+if (ExamGrade.value<  YearGrade.value,YearGrade.value - ExamGrade.value >= 2) {
+    CompleteGrade = ExamGrade.value
+}
+
+if (ExamGrade.value = YearGrade.value) {
+    CompleteGrade.value = ExamGrade.value
+    console.log ('Успешно, равны')
+}
+
+if (ExamGrade.value > YearGrade.value) {
+    CompleteGrade = ExamGrade.value
+}
+
+if (CompleteGrade = 0) {
+     p++
+}
+
+if (p>0) {
+    //document.getElementById("answer").textContent = err;
+} else
+{
+    //document.getElementById("answer").textContent = CompleteGrade;
+}
+
+function clickListener(){
+   console.log(p);
+   console.log(CompleteGrade);
+   console.log(ExamGrade.value);
+   console.log(YearGrade.value);
+ }
+
+
+</script> -->
+</html>
+<script>
+    var YearGrade = document.getElementById("YG");
+    var ExamGrade = document.getElementById("EG");
+    var answer = document.getElementById('answer').textContent;
+    var CompleteGrade
+    var err = 'Ошибка'
+    var p = 0;
+    
+    function clickListener(){
+        if (YearGrade.value<0) { //проверка того, чтобы введенные значение были больше нуля
+         p++
+    }
+    if (ExamGrade.value<0) {
+         p++
+    }
+    
+    if (ExamGrade.value < YearGrade.value,YearGrade.value - ExamGrade.value < 2) {
+        CompleteGrade = YearGrade.value
+    }
+    
+    if (ExamGrade.value <  YearGrade.value,YearGrade.value - ExamGrade.value >= 2) {
+        CompleteGrade = ExamGrade.value
+    }
+    
+    if (ExamGrade.value == YearGrade.value) {
+        CompleteGrade.value = ExamGrade.value
+        console.log ('Успешно, равны')
+    }
+    
+    if (ExamGrade.value > YearGrade.value) {
+        CompleteGrade = ExamGrade.value
+    }
+    
+    if (CompleteGrade == 0) {
+         p++
+    }
+    
+    if (p>0) {
+        document.getElementById("answer").textContent = err;
+    } else
+    {
+        document.getElementById("answer").textContent = CompleteGrade;
+    }
+    
+    
+       console.log(p);
+       console.log(CompleteGrade);
+       console.log(ExamGrade.value);
+       console.log(YearGrade.value);
+     }
+    
+    
+    </script>
