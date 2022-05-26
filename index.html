@@ -71,6 +71,8 @@ function clickListener(){
     var CompleteGrade
     var err = 'Ошибка'
     var p = 0;
+    var NE = Number(ExamGrade.value)
+    var NY = Number(YearGrade.value)
     
     function clickListener(){
         if (Number(YearGrade.value)<0) { //проверка того, чтобы введенные значение были больше нуля
@@ -85,7 +87,8 @@ function clickListener(){
     }
     
     if ((Number(ExamGrade.value) <  Number(YearGrade.value)) && (Number(YearGrade.value) - Number(ExamGrade.value) >= 2)) {
-        CompleteGrade = Number(ExamGrade.value)
+        CompleteGrade = Math.round((NE + NY) / 2)
+        //CompleteGrade = Number(ExamGrade.value)
     }
     
     if (Number(ExamGrade.value) == Number(YearGrade.value)) {
@@ -113,6 +116,9 @@ function clickListener(){
        console.log(CompleteGrade);
        console.log(ExamGrade.value);
        console.log(YearGrade.value);
+       console.log(NY);
+       console.log(NE);
+       console.log((NE + NY) / 2);
      }
     
     
